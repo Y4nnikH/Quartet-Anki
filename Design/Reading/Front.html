@@ -1,0 +1,22 @@
+<div class="body-upper" style="border-radius: 5px;">
+  <div class="expression">
+    {{Expression}}
+  </div>
+</div>
+
+<script>
+  var elem = document.querySelector(".soundLink, .replaybutton"); // AnkiMobile & AnkiDroid / AnkiDesktop
+  if (elem)
+    elem.click();
+</script>
+
+<!-- This line is Added by Cloze Furigana Tools to make its various features work. CFT.260.00 -->
+<script>var rubys = document.getElementsByTagName('ruby'); var spans = document.getElementsByTagName('span'); for (var i = 0; i < rubys.length; i++) { for (var s = 0; s < spans.length; s++) { if (spans[s].className === "cloze" && rubys[i].contains(spans[s])) { rubys[i].className = "cloze_container"; break; } } } </script>
+
+<script>
+  function playAudio() {
+    var audioDiv = document.getElementById('audio');
+    var audio = audioDiv.getElementsByTagName("*");
+    audio[0].click();
+  }
+</script>

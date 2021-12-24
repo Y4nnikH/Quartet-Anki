@@ -1,0 +1,160 @@
+ruby rt {
+  visibility: hidden;
+  font-size: 10px;
+}
+
+ruby:hover rt {
+  visibility: visible;
+  font-size: 10px;
+}
+
+.card {
+  font-family: UD Digi Kyokasho N-R;
+  font-size: 20px;
+  text-align: center;
+  background-color: #FDF8E9;
+  padding: 10px;
+}
+
+.body-upper {
+  font-family: Noto Sans JP Black;
+  font-size: 40px;
+  color: #EEE;
+  background-color: #555555;
+}
+
+.expression {
+  display: inline-flex;
+  line-height: 1;
+}
+
+.soundFront {
+  color: #9FDBDB;
+  width: 25px;
+}
+
+.imgfront {
+  display: inline-block;
+  padding: 10px;
+}
+
+.reading {
+  font-size: 25px;
+  margin-top: -5px;
+  line-height: 1;
+}
+
+.body-lower {
+  text-align: left;
+  color: #555555;
+  background-color: #9FDBDB;
+  padding: 20px;
+}
+
+.production-sol {
+  width: 100%;
+  text-align: center;
+  font-family: Noto Sans JP Black;
+  font-size: 40px;
+  border: 1px solid #555555;
+  margin-bottom: 10px;
+}
+
+#tags {
+  text-align: left;
+  padding: 5px 5px 5px 0px;
+  font-size: 15px;
+  color: #EEE;
+}
+
+.tag {
+  margin-top: 10px;
+  margin-left: 5px;
+  border-radius: 25px;
+  padding: 4px;
+  line-height: 1;
+  display: inline-block;
+}
+
+.lesson {
+  background-color: #555555;
+  border: 1.5px solid #FDF8E9;
+}
+
+.noun {
+  background-color: #003249;
+  border: 1.5px solid #FDF8E9;
+}
+
+.verb {
+  background-color: #DC602E;
+  border: 1.5px solid #FDF8E9;
+}
+
+.vgroup {
+  background-color: #E58C8A;
+  border: 1.5px solid #FDF8E9;
+}
+
+.trans {
+  background-color: #BFACC8;
+  border: 1.5px solid #FDF8E9;
+}
+
+.meaning {
+  font-family: Bree Serif;
+  font-size: 15px;
+  border: 1px solid #555555;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+td.exnum {
+  vertical-align: top;
+  padding-top: 5px;
+}
+
+td.sentence {
+  padding: 0;
+  line-height: 1.2;
+  font-size: 25px;
+}
+
+u {
+  text-decoration-style: wavy;
+  text-underline-position: under;
+  color: white;
+  padding: 1px;
+}
+
+.imgbg {
+  position: relative;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+img {
+  border: 2px solid #ffff;
+  border-radius: 7px;
+}
+
+.notes {
+  font-family: Noto Sans JP Regular;
+  font-size: 12px;
+  border: 1px dashed #555555;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+@font-face {
+  font-family: UD Digi Kyokasho N-R;
+  src: url("UDDigiKyokashoN-R.ttc");
+}
+
+@font-face {
+  font-family: Noto Sans JP Black;
+  src: url("NotoSansJP-Black-Alphabetic.ttf");
+}
+
+ /* This line is Added by Cloze Furigana Tools to make its various features work. CFT.260.00*/.hidden {visibility: hidden; font-size: 0;} .hidden .cloze, .cloze .hidden {visibility: visible; background-color: white;font-size: 0.8rem;} @-moz-document url-prefix() {ruby {position: relative;display: inline-block;} ruby rt {position: absolute;display: block;font-size: 0.5em;left: -50%;bottom: 115%;width: 210%;padding: 0;text-align: center;line-height:1em}} .hidden .basemaru {position:relative;} .hidden .basemaru:after {content: "◯"; visibility: visible; position:absolute; left:0;} .hidden .cloze .basemaru:after, .cloze .hidden .basemaru:after {visibility: hidden;} div{line-height: 2em;} .cloze_container .hidden {visibility: visible; background-color: white;}
