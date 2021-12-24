@@ -94,8 +94,8 @@
 
 </div>
 
-<div id="lesson" style="display:none">{{Lesson}}</div>
 <div id="pos" style="display:none">{{POS}}</div>
+<div id="deck" style="display:none">{{Deck}}</div>
 
 <!-- This line is Added by Cloze Furigana Tools to make its various features work. CFT.260.00 -->
 <script>var rubys = document.getElementsByTagName('ruby'); var spans = document.getElementsByTagName('span'); for (var i = 0; i < rubys.length; i++) { for (var s = 0; s < spans.length; s++) { if (spans[s].className === "cloze" && rubys[i].contains(spans[s])) { rubys[i].className = "cloze_container"; break; } } } </script>
@@ -115,7 +115,6 @@
 
 <script>
   var tagcontainer = document.getElementById('tags');
-  var lesson = document.getElementById('lesson');
   var posInput = document.getElementById('pos');
   var allpostexts = posInput.textContent.toLowerCase().split(/[\s;,]/);
 
@@ -162,10 +161,12 @@
     addVerbTags(verbtype, transitivity);
   
   function addLessonTag(){
-    if (lesson.textContent in ['1', '2', '3', '4', '5', '6']) {
+    var deckStr = document.getElementById('deck').innerHTML;
+    var lessonNums = deckStr.match(/[0-6]/);
+    if (lessonNums[0]) {
       var lessonTag = document.createElement('div');
       lessonTag.classList.add('tag', 'lesson');
-      lessonTag.textContent = '第' + lesson.textContent + '課';
+      lessonTag.textContent = '第' + lessonNums[0] + '課';
       tagcontainer.appendChild(lessonTag);
     }
   }
