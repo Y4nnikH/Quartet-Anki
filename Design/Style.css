@@ -20,12 +20,27 @@ ruby:hover rt {
   font-family: Noto Sans JP Black;
   font-size: 40px;
   color: #EEE;
+  line-height: 1;
   background-color: #555555;
+}
+
+.body-upper.listening-front {
+  line-height: 1;
+  padding: 15px;;
 }
 
 .expression {
   display: inline-flex;
   line-height: 1;
+  margin: 20px;
+}
+
+.expression.production {
+  margin-top: 10px;
+}
+
+.mobile .expression.production {
+  margin-top: 20px;
 }
 
 .soundFront {
@@ -35,12 +50,12 @@ ruby:hover rt {
 
 .imgfront {
   display: inline-block;
-  padding: 10px;
+  padding: 0 10px;
 }
 
 .reading {
   font-size: 25px;
-  margin-top: -5px;
+  margin: -10px 0 20px 0;
   line-height: 1;
 }
 
@@ -62,13 +77,13 @@ ruby:hover rt {
 
 #tags {
   text-align: left;
+  margin-top: -10px;
   padding: 5px 5px 5px 0px;
   font-size: 15px;
   color: #EEE;
 }
 
 .tag {
-  margin-top: 10px;
   margin-left: 5px;
   border-radius: 25px;
   padding: 4px;

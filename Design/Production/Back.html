@@ -1,5 +1,5 @@
 <div class="body-upper" style="border-radius: 5px 5px 0px 0px;">
-  <div class="expression">
+  <div class="expression production">
     {{Meaning}}
   </div>
 
@@ -17,15 +17,18 @@
 
   <div class="production-sol">
     <div class="expression">
-      {{Expression}}
-    </div>
+      <text>
+        {{Expression}}
 
-    {{#Audio}}
-    <svg class="soundFront" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="playAudio()">
-      <circle cx="21.5" cy="21.5" r="19" stroke="#555555" stroke-width="5" />
-      <path d="M28.7528 19.8782C29.8589 20.6765 29.8589 22.3235 28.7528 23.1218L19.1704 30.0373C17.8477 30.9919 16 30.0467 16 28.4155V14.5845C16 12.9533 17.8477 12.0081 19.1704 12.9627L28.7528 19.8782Z" fill="#555555" />
-    </svg>
-    {{/Audio}}
+        {{#Audio}}
+        <svg class="soundFront" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"
+          onclick="playAudio()">
+          <circle cx="21.5" cy="21.5" r="19" stroke="#555555" stroke-width="5" />
+          <path d="M28.7528 19.8782C29.8589 20.6765 29.8589 22.3235 28.7528 23.1218L19.1704 30.0373C17.8477 30.9919 16 30.0467 16 28.4155V14.5845C16 12.9533 17.8477 12.0081 19.1704 12.9627L28.7528 19.8782Z" fill="#555555" />
+        </svg>
+        {{/Audio}}
+      </text>
+    </div>
 
     {{#Reading}}
     <div class=reading>
@@ -109,7 +112,6 @@
     var audio = audioDiv.getElementsByTagName("*");
     audio[0].click();
   }
-  playAudio();
 </script>
 
 <script>
@@ -158,8 +160,10 @@
     addNounTag();
   if (verb)
     addVerbTags(verbtype, transitivity);
-  
-  function addLessonTag(){
+
+  playAudio();
+
+  function addLessonTag() {
     var deckStr = document.getElementById('deck').innerHTML;
     var lessonNums = deckStr.match(/[0-6]/);
     if (lessonNums[0]) {
@@ -169,13 +173,13 @@
       tagcontainer.appendChild(lessonTag);
     }
   }
-  function addNounTag(){
+  function addNounTag() {
     var nounTag = document.createElement('div');
     nounTag.classList.add('tag', 'noun');
     nounTag.textContent = 'noun';
     tagcontainer.appendChild(nounTag);
   }
-  function addVerbTags(vgroup, transitivity){
+  function addVerbTags(vgroup, transitivity) {
     var verbTag = document.createElement('div');
     verbTag.classList.add('tag', 'verb');
     verbTag.textContent = 'verb';
