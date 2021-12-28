@@ -121,6 +121,8 @@
 
   var noun = false;
   var verb = false;
+  var adjective = false;
+  var adverb = false;
   var verbtype = false;
   var transitivity = false;
 
@@ -129,6 +131,12 @@
 
     if (postext.includes('noun')) {
       noun = true;
+    }
+    else if (postext.includes('adv')) {
+      adverb = true;
+    }
+    else if (postext.includes('adj')) {
+      adjective = true;
     }
     else if (postext.includes('verb')) {
       verb = true;
@@ -160,6 +168,10 @@
     addNounTag();
   if (verb)
     addVerbTags(verbtype, transitivity);
+  if (adjective)
+    addAdjTag();
+  if (adverb)
+    addAdvTag();
 
   playAudio();
 
@@ -198,5 +210,17 @@
       transTag.textContent = transitivity;
       tagcontainer.appendChild(transTag);
     }
+  }
+  function addAdjTag() {
+    var adjTag = document.createElement('div');
+    adjTag.classList.add('tag', 'adj');
+    adjTag.textContent = 'adjective';
+    tagcontainer.appendChild(adjTag);
+  }
+  function addAdvTag() {
+    var advTag = document.createElement('div');
+    advTag.classList.add('tag', 'adv');
+    advTag.textContent = 'adverb';
+    tagcontainer.appendChild(advTag);
   }
 </script>

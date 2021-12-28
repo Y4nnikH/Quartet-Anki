@@ -116,6 +116,16 @@ ruby:hover rt {
   border: 1.5px solid #FDF8E9;
 }
 
+.adj {
+  background-color: #588100;
+  border: 1.5px solid #FDF8E9;
+}
+
+.adv {
+  background-color: #ffbf00;
+  border: 1.5px solid #FDF8E9;
+}
+
 .meaning {
   font-family: Bree Serif;
   font-size: 15px;
