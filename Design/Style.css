@@ -33,6 +33,31 @@ ruby:hover rt {
   display: inline-flex;
   line-height: 1;
   margin: 20px;
+  white-space: nowrap;
+}
+
+.pitch {
+  border-radius: 0px;
+  margin-right: -1px;
+}
+
+.pitch.t {
+  border-top: 2px solid #9FDBDB;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.pitch.r {
+  border-right: 2px solid #9FDBDB;
+  margin-right: -1px;
+}
+
+.pitch.b {
+  border-bottom: 2px solid #9FDBDB;
+}
+
+.pitch.b:not(.r) {
+  padding-left: 2px;
 }
 
 .expression.production {

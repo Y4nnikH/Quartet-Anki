@@ -2,7 +2,7 @@
   <div class="expression production">
     {{Meaning}}
   </div>
-
+<br>
   {{#Image}}
   <div class=imgfront>
     {{Image}}
@@ -18,7 +18,20 @@
   <div class="production-sol">
     <div class="expression">
       <text>
+		{{^Reading}}
+ 			{{#Pitch}}
+  				<div class="reading darkpitch">
+				{{Pitch}}
+				</div>
+			{{/Pitch}}
+			{{^Pitch}}
+				{{Expression}}
+			{{/Pitch}}
+		{{/Reading}}
+
+	  {{#Reading}}
         {{Expression}}
+	  {{/Reading}}
 
         {{#Audio}}
         <svg class="soundFront" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -30,11 +43,23 @@
       </text>
     </div>
 
-    {{#Reading}}
-    <div class=reading>
-      {{Reading}}
-    </div>
-    {{/Reading}}
+
+	{{#Pitch}}
+      <div class="reading darkpitch">
+        {{#Reading}}
+			{{Pitch}}
+	{{/Reading}}
+      </div>
+   {{/Pitch}}
+
+   {{#Reading}}
+     {{^Pitch}}
+       <div class=reading>
+          {{Reading}}
+       </div>
+     {{/Pitch}}
+  {{/Reading}}
+
 
     <div id=tags></div>
   </div>
