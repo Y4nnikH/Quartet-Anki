@@ -29,16 +29,28 @@ ruby:hover rt {
   padding: 15px;;
 }
 
+.body-upper.production {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .expression {
   display: inline-flex;
   line-height: 1;
   margin: 20px;
-  white-space: nowrap;
+}
+
+.expression.production {
+  margin: 0 0 10px 0;
+}
+
+.mobile .expression.production {
+  margin-top: 20px;
 }
 
 .pitch {
-  border-radius: 0px;
   margin-right: -1px;
+  margin-top: 20px;
 }
 
 .pitch.t {
@@ -60,12 +72,19 @@ ruby:hover rt {
   padding-left: 2px;
 }
 
-.expression.production {
-  margin-top: 10px;
+.darkpitch .pitch.t {
+  border-top: 2px solid #555555;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
-.mobile .expression.production {
-  margin-top: 20px;
+.darkpitch .pitch.r {
+  border-right: 2px solid #555555;
+  margin-right: -1px;
+}
+
+.darkpitch .pitch.b {
+  border-bottom: 2px solid #555555;
 }
 
 .soundFront {
@@ -75,12 +94,19 @@ ruby:hover rt {
 
 .imgfront {
   display: inline-block;
-  padding: 0 10px;
+  font-size: 0px;
+  padding: 10px 10px 10px;
 }
 
 .reading {
   font-size: 25px;
   margin: -10px 0 20px 0;
+  line-height: 1;
+}
+
+.pitch-reading {
+  font-size: 25px;
+  margin: 0 0 20px 0;
   line-height: 1;
 }
 

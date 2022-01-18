@@ -4,10 +4,7 @@
 
   <div class="expression">
     <text>
-
-	  {{#Reading}}
-        {{Expression}}
-	  {{/Reading}}
+      {{Expression}}
 
       <svg class="soundFront" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="playAudio()">
         <circle cx="21.5" cy="21.5" r="19" stroke="#9FDBDB" stroke-width="5" />
@@ -16,20 +13,27 @@
     </text>
   </div>
 
+  {{#Reading}}
+    {{#Pitch}}
+    <div class="pitch-reading">
+      {{Pitch}}
+    </div>
+    {{/Pitch}}
+    
+    {{^Pitch}}
+    <div class="reading">
+      {{Reading}}
+    </div>
+    {{/Pitch}}
+  {{/Reading}}
 
-  {{#Pitch}}
-  <div class=reading>
-    {{Pitch}}
-  </div>
-  {{/Pitch}}
-
-{{#Reading}}
-  {{^Pitch}}
-  <div class=reading>
-    {{Reading}}
-  </div>
-  {{/Pitch}}
-{{/Reading}}
+  {{^Reading}}
+    {{#Pitch}}
+    <div class="pitch-reading">
+      {{Pitch}}
+    </div>
+    {{/Pitch}}
+  {{/Reading}}
 
   <div id=tags></div>
 
@@ -38,9 +42,11 @@
 
 <div class="body-lower" style="border-radius: 0px 0px 5px 5px;">
 
+  {{#Meaning}}
   <div class="meaning">
     {{Meaning}}
   </div>
+  {{/Meaning}}
 
   <div id="senaudio1" style="display:none">{{Example 1 Audio}}</div>
   <div id="senaudio2" style="display:none">{{Example 2 Audio}}</div>

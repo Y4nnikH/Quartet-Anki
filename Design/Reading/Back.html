@@ -4,37 +4,35 @@
 
   <div class="expression">
     <text>
-    
-	  {{#Reading}}
-        {{Expression}}
-	  {{/Reading}}
-		{{^Reading}}
-			{{^Pitch}}
-				{{Expression}}
-			{{/Pitch}}
-		{{/Reading}}
+      {{Expression}}
 
-      {{#Audio}}
       <svg class="soundFront" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="playAudio()">
         <circle cx="21.5" cy="21.5" r="19" stroke="#9FDBDB" stroke-width="5" />
         <path d="M28.7528 19.8782C29.8589 20.6765 29.8589 22.3235 28.7528 23.1218L19.1704 30.0373C17.8477 30.9919 16 30.0467 16 28.4155V14.5845C16 12.9533 17.8477 12.0081 19.1704 12.9627L28.7528 19.8782Z" fill="#9FDBDB" />
       </svg>
-      {{/Audio}}
     </text>
   </div>
 
-	{{#Pitch}}
-      <div class="reading">
-        {{Pitch}}
-      </div>
-   {{/Pitch}}
+  {{#Reading}}
+    {{#Pitch}}
+    <div class="pitch-reading">
+      {{Pitch}}
+    </div>
+    {{/Pitch}}
+    
+    {{^Pitch}}
+    <div class="reading">
+      {{Reading}}
+    </div>
+    {{/Pitch}}
+  {{/Reading}}
 
-   {{#Reading}}
-     {{^Pitch}}
-       <div class=reading>
-          {{Reading}}
-       </div>
-     {{/Pitch}}
+  {{^Reading}}
+    {{#Pitch}}
+    <div class="pitch-reading">
+      {{Pitch}}
+    </div>
+    {{/Pitch}}
   {{/Reading}}
 
   <div id=tags></div>
@@ -44,9 +42,11 @@
 
 <div class="body-lower" style="border-radius: 0px 0px 5px 5px;">
 
+  {{#Meaning}}
   <div class="meaning">
     {{Meaning}}
   </div>
+  {{/Meaning}}
 
   <div id="senaudio1" style="display:none">{{Example 1 Audio}}</div>
   <div id="senaudio2" style="display:none">{{Example 2 Audio}}</div>
@@ -191,8 +191,6 @@
     addAdjTag();
   if (adverb)
     addAdvTag();
-
-  playAudio();
 
   function addLessonTag() {
     var deckStr = document.getElementById('deck').innerHTML;
