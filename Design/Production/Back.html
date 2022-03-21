@@ -20,20 +20,7 @@
   <div class="production-sol">
     <div class="expression">
       <text>
-      {{^Reading}}
-        {{#Pitch}}
-        <div class="pitch-reading darkpitch">
-          {{Pitch}}
-        </div>
-        {{/Pitch}}
-        {{^Pitch}}
-          {{Expression}}
-        {{/Pitch}}
-      {{/Reading}}
-
-      {{#Reading}}
-          {{Expression}}
-      {{/Reading}}
+        {{Expression}}
 
         {{#Audio}}
         <svg class="soundFront" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -45,27 +32,19 @@
       </text>
     </div>
 
-  {{#Reading}}
-    {{#Pitch}}
-    <div class="pitch-reading darkpitch">
-      {{Pitch}}
-    </div>
-    {{/Pitch}}
-    
-    {{^Pitch}}
+  {{#Pitch}}
+  <div class="pitch-reading darkpitch">
+    {{Pitch}}
+  </div>
+  {{/Pitch}}
+  
+  {{^Pitch}}
+    {{#Reading}}
     <div class="reading">
       {{Reading}}
     </div>
-    {{/Pitch}}
-  {{/Reading}}
-
-  {{^Reading}}
-    {{#Pitch}}
-    <div class="pitch-reading darkpitch">
-      {{Pitch}}
-    </div>
-    {{/Pitch}}
-  {{/Reading}}
+    {{/Reading}}
+  {{/Pitch}}
 
     <div id=tags></div>
   </div>

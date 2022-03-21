@@ -192,6 +192,8 @@
   if (adverb)
     addAdvTag();
 
+  playAudio();
+
   function addLessonTag() {
     var deckStr = document.getElementById('deck').innerHTML;
     var lessonNums = deckStr.match(/[0-6]/);
