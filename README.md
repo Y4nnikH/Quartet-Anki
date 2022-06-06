@@ -1,5 +1,5 @@
 # Quartet-Anki
-Anki Deck(s) for study of Quartet vocabulary (or any Japanese vocab). Card design based on work by [u/TrainOfPotatoes](https://www.reddit.com/user/TrainOfPotatoes/).
+Anki Note Type for study of Quartet vocabulary (or any Japanese vocab). Card design based on work by [u/TrainOfPotatoes](https://www.reddit.com/user/TrainOfPotatoes/).
 
 ## How To Import into Anki
 
