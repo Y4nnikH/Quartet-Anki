@@ -16,3 +16,11 @@ The template deck can be deleted - it does not remove the note type.
 - **Download fonts** "NotoSansJP" (can be found [here](https://en.bestfonts.pro/font/download-web/5c8a5b8f7dd582046594053d/NotoSansJP-Black-Alphabetic)) and "UDDigiKyokasho" ([here](https://m.fontke.com/font/24526460/download/))
   - save as "NotoSansJP-Black-Alphabetic.ttf" and "UDDigiKyokashoN-R.ttc"
   - copy both to anki collection.media folder on windows/linux/??. After syncing to ankiweb, it should also be available on your ankidroid.
+- Keep the cards in a deck structure like this:
+```
+- 日本語
+  - Quartet
+    - Lection 1
+    - Lection 2
+    - ...
+```
