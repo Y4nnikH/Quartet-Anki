@@ -24,6 +24,10 @@ ruby:hover rt {
   background-color: #555555;
 }
 
+.mobile .body-upper {
+  font-family: "HiraMinProN-W3", "Hiragino Mincho ProN W3", "Hiragino Mincho ProN", "ヒラギノ明朝 ProN W3", "游明朝", YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", "MS Mincho", serif;
+}
+
 .body-upper.listening-front {
   line-height: 1;
   padding: 15px;;
@@ -41,10 +45,12 @@ ruby:hover rt {
 }
 
 .expression.production {
+  font-family: Noto Sans JP Black;
   margin: 0 0 10px 0;
 }
 
 .mobile .expression.production {
+  font-family: "HiraMinProN-W3", "Hiragino Mincho ProN W3", "Hiragino Mincho ProN", "ヒラギノ明朝 ProN W3", "游明朝", YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", "MS Mincho", serif;
   margin-top: 10px;
 }
 
@@ -140,40 +146,6 @@ ruby:hover rt {
   padding: 4px;
   line-height: 1;
   display: inline-block;
-}
-
-.lesson {
-  background-color: #555555;
-  border: 1.5px solid #FDF8E9;
-}
-
-.noun {
-  background-color: #003249;
-  border: 1.5px solid #FDF8E9;
-}
-
-.verb {
-  background-color: #DC602E;
-  border: 1.5px solid #FDF8E9;
-}
-
-.vgroup {
-  background-color: #E58C8A;
-  border: 1.5px solid #FDF8E9;
-}
-
-.trans {
-  background-color: #BFACC8;
-  border: 1.5px solid #FDF8E9;
-}
-
-.adj {
-  background-color: #588100;
-  border: 1.5px solid #FDF8E9;
-}
-
-.adv {
-  background-color: #ffbf00;
   border: 1.5px solid #FDF8E9;
 }
 
@@ -194,6 +166,10 @@ td.sentence {
   padding: 0;
   line-height: 1.2;
   font-size: 25px;
+}
+
+span.emph-ex {
+  color: #000000;
 }
 
 u {

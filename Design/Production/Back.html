@@ -126,111 +126,69 @@
 
 <script>
   var tagcontainer = document.getElementById('tags');
-  var posInput = document.getElementById('pos');
-  var allpostexts = posInput.textContent.toLowerCase().split(/[\s;,]/);
+  var noteText = document.getElementById('pos').textContent.toLowerCase();
 
-  var noun = false;
-  var verb = false;
-  var adjective = false;
-  var adverb = false;
-  var verbtype = false;
-  var transitivity = false;
+  var deckStr = document.getElementById('deck').innerHTML;
+  var lessonNum = deckStr.match(/\d+/)[0];
+  if (lessonNum) // lesson
+    addTag('第' + lessonNum + '課', '#555555');
 
-  for (let i = 0; i < allpostexts.length; i++) {
-    postext = allpostexts[i];
+  if (noteText.includes('futsuumeishi'))
+    addTag('noun', '#003249');
 
-    if (postext.includes('noun')) {
-      noun = true;
-    }
-    else if (postext.includes('adv')) {
-      adverb = true;
-    }
-    else if (postext.includes('adj')) {
-      adjective = true;
-    }
-    else if (postext.includes('verb')) {
-      verb = true;
-    }
-    else if (postext.includes('godan')) {
-      verb = true;
-      verbtype = 'godan';
-    }
-    else if (postext.includes('ichidan')) {
-      verb = true;
-      verbtype = 'ichidan';
-    }
-    else if (postext.includes('irreg')) {
-      verb = true;
-      verbtype = 'irreg';
-    }
-    else if (postext.includes('trans')) {
-      if (postext.includes('intrans'))
-        transitivity = 'intrans.';
-      else
-        transitivity = 'trans.';
-    }
-    else
-      continue;
+  if (noteText.includes('ichidan')) {  // RU-verb
+    addTag('verb', '#DC602E');
+    addTag('る', '#DC602E');
+  }
+  if (noteText.includes('godan')) { // U-verb
+    addTag('verb', '#DC602E');
+    addTag('う', '#DC602E');
   }
 
-  addLessonTag();
-  if (noun)
-    addNounTag();
-  if (verb)
-    addVerbTags(verbtype, transitivity);
-  if (adjective)
-    addAdjTag();
-  if (adverb)
-    addAdvTag();
+  if (noteText.includes('suru')) // suru-verb
+    addTag('する', '#DC602E');
 
-  playAudio();
+  if (noteText.includes('intransitive'))  // transitivity
+    addTag('intrans', '#BFACC8')
+  else if (noteText.includes('transitive'))
+    addTag('trans', '#BFACC8')
 
-  function addLessonTag() {
-    var deckStr = document.getElementById('deck').innerHTML;
-    var lessonNums = deckStr.match(/[0-6]/);
-    if (lessonNums[0]) {
-      var lessonTag = document.createElement('div');
-      lessonTag.classList.add('tag', 'lesson');
-      lessonTag.textContent = '第' + lessonNums[0] + '課';
-      tagcontainer.appendChild(lessonTag);
-    }
+  if (noteText.includes('keiyoushi')) { // I-adjective
+    addTag('adj', '#588100');
+    addTag('い', '#588100');
   }
-  function addNounTag() {
-    var nounTag = document.createElement('div');
-    nounTag.classList.add('tag', 'noun');
-    nounTag.textContent = 'noun';
-    tagcontainer.appendChild(nounTag);
-  }
-  function addVerbTags(vgroup, transitivity) {
-    var verbTag = document.createElement('div');
-    verbTag.classList.add('tag', 'verb');
-    verbTag.textContent = 'verb';
-    tagcontainer.appendChild(verbTag);
 
-    if (vgroup) {
-      var vgroupTag = document.createElement('div');
-      vgroupTag.classList.add('tag', 'vgroup');
-      vgroupTag.textContent = vgroup;
-      tagcontainer.appendChild(vgroupTag);
-    }
+  if (noteText.includes('keiyoudoushi')) { // NA-adjective
+    addTag('adj', '#588100');
+    addTag('な', '#588100');
+  }
 
-    if (transitivity) {
-      var transTag = document.createElement('div');
-      transTag.classList.add('tag', 'trans');
-      transTag.textContent = transitivity;
-      tagcontainer.appendChild(transTag);
-    }
-  }
-  function addAdjTag() {
-    var adjTag = document.createElement('div');
-    adjTag.classList.add('tag', 'adj');
-    adjTag.textContent = 'adjective';
-    tagcontainer.appendChild(adjTag);
-  }
-  function addAdvTag() {
-    var advTag = document.createElement('div');
-    advTag.classList.add('tag', 'adv');
-    advTag.textContent = 'adverb';
-    tagcontainer.appendChild(advTag);
+  if (noteText.includes('taking no'))
+    addTag('の', '#588100');
+
+  if (noteText.includes('fukushi')) // adverb
+    addTag('adv', '#ffbf00');
+
+  if (noteText.includes('taking to'))
+    addTag('と', '#ffbf00');
+
+  if (noteText.includes('expression')) // expression
+    addTag('expr', '#A9A9A9');
+
+  if (noteText.includes('suffix')) // Suffix
+    addTag('suffix', '#A9A9A9');
+
+  if (noteText.includes('onomatopoeia')) // Suffix
+    addTag('♫', '#A9A9A9');
+
+  if (noteText.includes('kana'))
+    addTag('かな', '#A9A9A9');
+
+  function addTag(text, color) {
+    var tag = document.createElement('div');
+    tag.classList.add('tag');
+    //tag.style.backgroundColor = color;
+    tag.textContent = text;
+    tagcontainer.appendChild(tag);
   }
 </script>
