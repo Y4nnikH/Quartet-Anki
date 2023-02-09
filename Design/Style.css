@@ -147,7 +147,32 @@ ruby:hover rt {
   line-height: 1;
   display: inline-block;
   border: 1.5px solid #FDF8E9;
+  background-color: #A9A9A9;
 }
+
+.tag-p {
+  margin-left: 5px;
+  border-radius: 25px;
+  padding: 4px;
+  line-height: 1;
+  display: inline-block;
+  border: 1.5px solid #FDF8E9;
+  background-color: #d6d6d6;
+  color: #555555;
+}
+
+.tag-color-noun { background-color: #294f60; } /*003249*/
+.tag-color-verb { background-color: #d65252; } /*DC602E*/
+.tag-color-vt   { background-color: #7a6285; } /*008000*/
+.tag-color-adj  { background-color: #4d824d; } /*588100*/
+.tag-color-adv  { background-color: #be5b2d; } /*ffbf00*/
+.tag-color-lesson { background-color: #555555; }
+.tag-p-color-noun { background-color: #89b8ff; }
+.tag-p-color-verb { background-color: #ffa2a2; }
+.tag-p-color-vt   { background-color: #c8a2d1; }
+.tag-p-color-adj  { background-color: #a2d1a2; }
+.tag-p-color-adv  { background-color: #ffbf80; }
+.tag-p-color-lesson { background-color: #9FDBDB; }
 
 .meaning {
   font-family: Bree Serif;

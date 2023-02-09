@@ -131,63 +131,68 @@
   var deckStr = document.getElementById('deck').innerHTML;
   var lessonNum = deckStr.match(/\d+/)[0];
   if (lessonNum) // lesson
-    addTag('第' + lessonNum + '課', '#555555');
+    addTag('第' + lessonNum + '課', 'lesson');
 
   if (noteText.includes('futsuumeishi'))
-    addTag('noun', '#003249');
+    addTag('noun', 'noun');
 
   if (noteText.includes('ichidan')) {  // RU-verb
-    addTag('verb', '#DC602E');
-    addTag('る', '#DC602E');
+    addTag('verb', 'verb');
+    addTag('る', 'verb');
   }
   if (noteText.includes('godan')) { // U-verb
-    addTag('verb', '#DC602E');
-    addTag('う', '#DC602E');
+    addTag('verb', 'verb');
+    addTag('う', 'verb');
   }
 
   if (noteText.includes('suru')) // suru-verb
-    addTag('する', '#DC602E');
+    addTag('する', 'verb');
 
   if (noteText.includes('intransitive'))  // transitivity
-    addTag('intrans', '#BFACC8')
-  else if (noteText.includes('transitive'))
-    addTag('trans', '#BFACC8')
+    addTag('intrans', 'vt');
+
+  if (noteText.replace('intransitive', '').includes('transitive'))
+    addTag('trans', 'vt');
 
   if (noteText.includes('keiyoushi')) { // I-adjective
-    addTag('adj', '#588100');
-    addTag('い', '#588100');
+    addTag('adj', 'adj');
+    addTag('い', 'adj');
   }
 
   if (noteText.includes('keiyoudoushi')) { // NA-adjective
-    addTag('adj', '#588100');
-    addTag('な', '#588100');
+    addTag('adj', 'adj');
+    addTag('な', 'adj');
   }
 
   if (noteText.includes('taking no'))
-    addTag('の', '#588100');
+    addTag('の', 'adj');
 
   if (noteText.includes('fukushi')) // adverb
-    addTag('adv', '#ffbf00');
+    addTag('adv', 'adv');
 
   if (noteText.includes('taking to'))
-    addTag('と', '#ffbf00');
+    addTag('と', 'adv');
 
   if (noteText.includes('expression')) // expression
-    addTag('expr', '#A9A9A9');
+    addTag('expr');
+
+  if (noteText.includes('prefix')) // Suffix
+    addTag('suffix');
 
   if (noteText.includes('suffix')) // Suffix
-    addTag('suffix', '#A9A9A9');
+    addTag('suffix');
 
   if (noteText.includes('onomatopoeia')) // Suffix
-    addTag('♫', '#A9A9A9');
+    addTag('♫');
 
   if (noteText.includes('kana'))
-    addTag('かな', '#A9A9A9');
+    addTag('かな');
 
-  function addTag(text, color) {
+  function addTag(text, color = '') {
     var tag = document.createElement('div');
     tag.classList.add('tag');
-    //tag.style.backgroundColor = color;
+    if (color)
+      tag.classList.add('tag-p-color-' + color);
     tag.textContent = text;
     tagcontainer.appendChild(tag);
   }
