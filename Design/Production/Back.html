@@ -122,6 +122,7 @@
     var audio = audioDiv.getElementsByTagName("*");
     audio[0].click();
   }
+  playAudio();
 </script>
 
 <script>
@@ -190,7 +191,7 @@
 
   function addTag(text, color = '') {
     var tag = document.createElement('div');
-    tag.classList.add('tag');
+    tag.classList.add('tag-p');
     if (color)
       tag.classList.add('tag-p-color-' + color);
     tag.textContent = text;
