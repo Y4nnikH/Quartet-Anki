@@ -1,0 +1,183 @@
+<div class="back">
+  <div class="card">
+    <div class="jp">
+      <div class="kanji-kanji">{{kanji:Kanji}}</div>
+
+      <div class="divTable readings">
+        <div class="divTableBody">
+          <!-- Conditional replacement (see: http://ankisrs.net/docs/manual.html#conditional-replacement) -->
+          {{#ON reading}}
+          <div class="divTableRow">
+            <div class="divTableCell"><div class="kanji-on-visible">ON</div></div>
+            <div class="divTableCell"><div class="kanji-on-visible">{{ON reading}}</div></div>
+          </div>
+          {{/ON reading}}
+          {{#KUN reading}}
+          <div class="divTableRow">
+            <div class="divTableCell"><div class="kanji-on-visible">KUN</div></div>
+            <div class="divTableCell"><div class="kanji-on-visible">{{KUN reading}}</div></div>
+          </div>
+          {{/KUN reading}}
+          {{#main ON reading}}
+          <div class="divTableRow">
+            <div class="divTableCell"><div class="kanji-on-visible">Main ON</div></div>
+            <div class="divTableCell"><div class="kanji-on-visible">{{main ON reading}}</div></div>
+          </div>
+          {{/main ON reading}}
+        </div>
+      </div>
+    </div>
+    <hr id=answer>
+    <!-- Keyword -->
+    <div style='font-family: Arial; font-size: 30px;'><div class="keyword">{{keyword}}</div></div>
+    <!-- Vocab table desktop -->
+    <div class="divTable vocab-desktop">
+      <div class="divTableBody">
+        <!-- Conditional replacement (see: http://ankisrs.net/docs/manual.html#conditional-replacement) -->
+        {{#key vocab 1 kanji}}
+        <div class="divTableRow key-vocab-row">
+          <div class="divTableCell"><div class="jp"><div class="kanji"><div class="key-vocab"> {{kanji:key vocab 1 kanji}} </div></div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="furigana"><div class="key-vocab"> {{furigana:key vocab 1 reading}} </div></div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="english"><div class="key-vocab"> {{furigana:key vocab 1 english}} </div></div></div></div>
+        </div>
+        {{/key vocab 1 kanji}}
+        {{#key vocab 2 kanji}}
+        <div class="divTableRow key-vocab-row">
+          <div class="divTableCell"><div class="jp"><div class="kanji"><div class="key-vocab"> {{kanji:key vocab 2 kanji}} </div></div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="furigana"><div class="key-vocab"> {{furigana:key vocab 2 reading}} </div></div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="english"><div class="key-vocab"> {{furigana:key vocab 2 english}} </div></div></div></div>
+        </div>
+        {{/key vocab 2 kanji}}
+        {{#key vocab 3 kanji}}
+        <div class="divTableRow key-vocab-row">
+          <div class="divTableCell"><div class="jp"><div class="kanji"><div class="key-vocab"> {{kanji:key vocab 3 kanji}} </div></div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="furigana"><div class="key-vocab"> {{furigana:key vocab 3 reading}} </div></div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="english"><div class="key-vocab"> {{furigana:key vocab 3 english}} </div></div></div></div>
+        </div>
+        {{/key vocab 3 kanji}}
+        {{#key vocab 4 kanji}}
+        <div class="divTableRow key-vocab-row">
+          <div class="divTableCell"><div class="jp"><div class="kanji"><div class="key-vocab"> {{kanji:key vocab 4 kanji}} </div></div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="furigana"><div class="key-vocab"> {{furigana:key vocab 4 reading}} </div></div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="english"><div class="key-vocab"> {{furigana:key vocab 4 english}} </div></div></div></div>
+        </div>
+        {{/key vocab 4 kanji}}
+        <!-- Standard vocab -->
+        {{#vocab 1 kanji}}
+        <div class="divTableRow">
+          <div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 1 kanji}} </div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="furigana"> {{furigana:vocab 1 reading}}</div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="english"> {{furigana:vocab 1 english}}</div></div></div>
+        </div>
+        {{/vocab 1 kanji}}
+        {{#vocab 2 kanji}}
+        <div class="divTableRow">
+          <div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 2 kanji}} </div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="furigana"> {{furigana:vocab 2 reading}}</div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="english"> {{furigana:vocab 2 english}}</div></div></div>
+        </div>
+        {{/vocab 2 kanji}}
+        {{#vocab 3 kanji}}
+        <div class="divTableRow">
+          <div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 3 kanji}} </div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="furigana"> {{furigana:vocab 3 reading}}</div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="english"> {{furigana:vocab 3 english}}</div></div></div>
+        </div>
+        {{/vocab 3 kanji}}
+        {{#vocab 4 kanji}}
+        <div class="divTableRow">
+          <div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 4 kanji}} </div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="furigana"> {{furigana:vocab 4 reading}}</div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="english"> {{furigana:vocab 4 english}}</div></div></div>
+        </div>
+        {{/vocab 4 kanji}}
+        {{#vocab 5 kanji}}
+        <div class="divTableRow">
+          <div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 5 kanji}} </div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="furigana"> {{furigana:vocab 5 reading}}</div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="english"> {{furigana:vocab 5 english}}</div></div></div>
+        </div>
+        {{/vocab 5 kanji}}
+        {{#vocab 6 kanji}}
+        <div class="divTableRow">
+          <div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 6 kanji}} </div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="furigana"> {{furigana:vocab 6 reading}}</div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="english"> {{furigana:vocab 6 english}}</div></div></div>
+        </div>
+        {{/vocab 6 kanji}}
+        {{#vocab 7 kanji}}
+        <div class="divTableRow">
+          <div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 7 kanji}} </div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="furigana"> {{furigana:vocab 7 reading}}</div></div></div>
+          <div class="divTableCell"><div class="jp"><div class="english"> {{furigana:vocab 7 english}}</div></div></div>
+        </div>
+        {{/vocab 7 kanji}}
+      </div>
+    </div>
+    <!-- DivTable.com -->
+    <!-- Mobile vocab -->
+    <div class="divTable vocab-mobile">
+      <div class="divTableBody">
+        {{#key vocab 1 kanji}}
+        <div class="divTableRow key-vocab-row"><div class="divTableCell"><div class="jp"><div class="kanji"><div class="key-vocab"> {{kanji:key vocab 1 kanji}} </div></div></div></div></div>
+        <div class="divTableRow key-vocab-row"><div class="divTableCell"><div class="jp"><div class="furigana"><div class="key-vocab"> {{furigana:key vocab 1 reading}} </div></div></div></div></div>
+        <div class="divTableRow key-vocab-row"><div class="divTableCell"><div class="jp"><div class="english"><div class="key-vocab"> {{furigana:key vocab 1 english}} </div></div></div></div></div>
+        {{/key vocab 1 kanji}}
+        {{#key vocab 2 kanji}}
+        <div class="divTableRow key-vocab-row"><div class="divTableCell"><div class="jp"><div class="kanji"><div class="key-vocab"> {{kanji:key vocab 2 kanji}} </div></div></div></div></div>
+        <div class="divTableRow key-vocab-row"><div class="divTableCell"><div class="jp"><div class="furigana"><div class="key-vocab"> {{furigana:key vocab 2 reading}} </div></div></div></div></div>
+        <div class="divTableRow key-vocab-row"><div class="divTableCell"><div class="jp"><div class="english"><div class="key-vocab"> {{furigana:key vocab 2 english}} </div></div></div></div></div>
+        {{/key vocab 2 kanji}}
+        {{#key vocab 3 kanji}}
+        <div class="divTableRow key-vocab-row"><div class="divTableCell"><div class="jp"><div class="kanji"><div class="key-vocab"> {{kanji:key vocab 3 kanji}} </div></div></div></div></div>
+        <div class="divTableRow key-vocab-row"><div class="divTableCell"><div class="jp"><div class="furigana"><div class="key-vocab"> {{furigana:key vocab 3 reading}} </div></div></div></div></div>
+        <div class="divTableRow key-vocab-row"><div class="divTableCell"><div class="jp"><div class="english"><div class="key-vocab"> {{furigana:key vocab 3 english}} </div></div></div></div></div>
+        {{/key vocab 3 kanji}}
+        {{#key vocab 4 kanji}}
+        <div class="divTableRow key-vocab-row"><div class="divTableCell"><div class="jp"><div class="kanji"><div class="key-vocab"> {{kanji:key vocab 4 kanji}} </div></div></div></div></div>
+        <div class="divTableRow key-vocab-row"><div class="divTableCell"><div class="jp"><div class="furigana"><div class="key-vocab"> {{furigana:key vocab 4 reading}} </div></div></div></div></div>
+        <div class="divTableRow key-vocab-row"><div class="divTableCell"><div class="jp"><div class="english"><div class="key-vocab"> {{furigana:key vocab 4 english}} </div></div></div></div></div>
+        {{/key vocab 4 kanji}}
+
+        <!-- Standard vocab mobile -->
+        {{#vocab 1 kanji}}
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 1 kanji}} </div></div></div></div>
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="furigana"> {{furigana:vocab 1 reading}}</div></div></div></div>
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="english"> {{furigana:vocab 1 english}}</div></div></div></div>
+        {{/vocab 1 kanji}}
+        {{#vocab 2 kanji}}
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 2 kanji}} </div></div></div></div>
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="furigana"> {{furigana:vocab 2 reading}}</div></div></div></div>
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="english"> {{furigana:vocab 2 english}}</div></div></div></div>
+        {{/vocab 2 kanji}}
+        {{#vocab 3 kanji}}
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 3 kanji}} </div></div></div></div>
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="furigana"> {{furigana:vocab 3 reading}}</div></div></div></div>
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="english"> {{furigana:vocab 3 english}}</div></div></div></div>
+        {{/vocab 3 kanji}}
+        {{#vocab 4 kanji}}
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 4 kanji}} </div></div></div></div>
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="furigana"> {{furigana:vocab 4 reading}}</div></div></div></div>
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="english"> {{furigana:vocab 4 english}}</div></div></div></div>
+        {{/vocab 4 kanji}}
+        {{#vocab 5 kanji}}
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 5 kanji}} </div></div></div></div>
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="furigana"> {{furigana:vocab 5 reading}}</div></div></div></div>
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="english"> {{furigana:vocab 5 english}}</div></div></div></div>
+        {{/vocab 5 kanji}}
+        {{#vocab 6 kanji}}
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 6 kanji}} </div></div></div></div>
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="furigana"> {{furigana:vocab 6 reading}}</div></div></div></div>
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="english"> {{furigana:vocab 6 english}}</div></div></div></div>
+        {{/vocab 6 kanji}}
+        {{#vocab 7 kanji}}
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 7 kanji}} </div></div></div></div>
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="furigana"> {{furigana:vocab 7 reading}}</div></div></div></div>
+        <div class="divTableRow"><div class="divTableCell"><div class="jp"><div class="english"> {{furigana:vocab 7 english}}</div></div></div></div>
+        {{/vocab 7 kanji}}
+      </div>
+    </div>
+    <div class="diagram">{{Diagram}}</div>
+    <div style='font-family: Arial; font-size: 9px;'>KLC id: {{id}}</div>
+  </div>
+</div>

@@ -1,0 +1,215 @@
+/* fonts styling */
+.win .jp {
+  font-family: "Meiryo", "MS Mincho", "ＭＳ 明朝";
+}
+.mac .jp {
+  font-family: "Hiragino Mincho Pro", "ヒラギノ明朝 Pro";
+}
+.linux .jp {
+  font-family: "Kochi Mincho", "東風明朝";
+}
+.mobile .jp {
+  font-family: "Hiragino Mincho ProN";
+}
+
+/* General card styling */
+
+.card {
+  font-family: arial;
+  font-size: 30px;
+  text-align: center;
+  background-color: white;
+}
+
+.card .nightMode {
+  font-family: arial;
+  font-size: 30px;
+  text-align: center;
+  background-color: red;
+}
+
+.keyword:first-letter {
+  text-transform: capitalize;
+}
+
+.kanji-kanji {
+  display: inline-block;
+  font-size: 40px;
+}
+
+.kanji-kanji:hover {
+  font-family: "HiraMinProN-W3", "Hiragino Mincho ProN W3",
+    "Hiragino Mincho ProN", "ヒラギノ明朝 ProN W3", "游明朝", YuMincho,
+    "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", "MS Mincho", serif;
+}
+
+.keyword {
+  background-color: lightgray;
+  padding: 15px 0 15px 0;
+  margin-bottom: 10px;
+}
+
+.kanji-quesiton {
+  background-color: lightgray;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+.kanji-quesiton .kanji-on {
+  font-size: 12px;
+  color: LightSeahGreen;
+}
+
+.hint {
+  color: #aeaeae;
+  font-size: 12px;
+}
+
+.divTableCell.hint-vocab {
+  font-size: 15px;
+  background-color: white;
+  color: #cecece;
+  vertical-align: center;
+}
+
+.hidden-reading {
+  background-color: LightGray;
+  color: LightGray;
+}
+
+.hidden-reading:hover,
+.kanji-on-visible,
+.kanji-kun-visible {
+  text-align: left;
+  font-size: 12px;
+  color: LightSeaGreen;
+}
+
+/* Vocab table Styling */
+.divTable {
+  display: table;
+  width: 100%;
+}
+
+.divTable {
+  display: table;
+}
+
+.divTableRow {
+  display: table-row;
+}
+.divTableHeading {
+  background-color: #eee;
+  display: table-header-group;
+}
+.divTableCell,
+.divTableHead {
+  text-align: left;
+  display: table-cell;
+  padding: 3px 10px;
+  font-size: 18px;
+}
+.divTableCell .english:first-letter {
+  text-transform: capitalize;
+}
+
+.divTableHeading {
+  background-color: #eee;
+  display: table-header-group;
+  font-weight: bold;
+}
+.divTableFoot {
+  background-color: #eee;
+  display: table-footer-group;
+  font-weight: bold;
+}
+.divTableBody {
+  display: table-row-group;
+}
+
+.divTableCell .jp .furigana .hidden .key-vocab {
+  color: WhiteSmoke;
+}
+
+.divTableCell .hidden {
+  color: white;
+}
+
+.key-vocab-row {
+  background-color: WhiteSmoke;
+}
+
+.hidden:hover {
+  color: LightSeaGreen;
+}
+
+.divTableCell .jp .furigana .hidden .key-vocab:hover {
+  color: LightSeaGreen;
+}
+
+.divTableCell .furigana {
+  color: LightSeaGreen;
+}
+
+.divTableCell .english {
+  color: GoldenRod;
+}
+
+.diagram {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 130px;
+}
+
+/* mobile v.s desktop styling */
+.win .vocab-mobile {
+  display: none;
+}
+.mac .vocab-mobile {
+  display: none;
+}
+.linux .vocab-mobile {
+  display: none;
+}
+.ipad .vocab-mobile {
+  display: none;
+}
+
+.mobile .vocab-desktop {
+  display: none;
+}
+.iphone .vocab-desktop {
+  display: none;
+}
+.ipod .vocab-desktop {
+  display: none;
+}
+.android .vocab-desktop {
+  display: none;
+}
+
+/* Hints*/
+.mobile .divTableCell.hint-vocab {
+  display: none;
+}
+.iphone .divTableCell.hint-vocab {
+  display: none;
+}
+.ipod .divTableCell.hint-vocab {
+  display: none;
+}
+.android .divTableCell.hint-vocab {
+  display: none;
+}
+
+/* Has to be there, else is Android acting stupid ... */
+.android .vocab-mobile {
+  display: table !important;
+}
+.mac .vocab-desktop {
+  display: table !important;
+}
+.ipad .vocab-desktop {
+  display: table !important;
+}
