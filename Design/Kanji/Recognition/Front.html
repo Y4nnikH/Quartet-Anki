@@ -1,119 +1,101 @@
-<div class="front">
-  <div class="card">
-    <div class="jp">
-      <div class ="kanji-quesiton">
-        <div class="kanji-kanji">{{kanji:Kanji}}</div>
-        <div class="divTable readings">
-          <div class="divTableBody">
-            <!-- Conditional replacement (see: http://ankisrs.net/docs/manual.html#conditional-replacement) -->
-            {{#ON reading}}
-            <div class="divTableRow">
-              <div class="divTableCell"><div class="kanji-on">ON</div></div>
-              <div class="divTableCell"><div class="hidden-reading"><div class="kanji-on">{{ON reading}}</div></div></div>
-              <div class="divTableCell"><div class="kanji-on"><div class="hint">&#8592;   HINT</div></div></div>
-            </div>
-            {{/ON reading}}
-            {{#KUN reading}}
-            <div class="divTableRow">
-              <div class="divTableCell"><div class="kanji-on">KUN</div></div>
-              <div class="divTableCell"><div class="hidden-reading"><div class="kanji-on">{{KUN reading}}</div></div></div>
-
-              <div class="divTableCell"><div class="kanji-on"><div class="hint">&#8592;   HINT</div></div></div>
-            </div>
-            {{/KUN reading}}
-            {{#main ON reading}}
-            <div class="divTableRow">
-              <div class="divTableCell"><div class="kanji-on">Main ON</div></div>
-              <div class="divTableCell"><div class="hidden-reading"><div class="kanji-on">{{main ON reading}}</div></div></div>
-              <div class="divTableCell"><div class="kanji-on"><div class="hint">&#8592;  HINT</div></div></div>
-            </div>
-            {{/main ON reading}}
-          </div>
-        </div>
+<div class="body-upper recognition jp">
+  <div class="kanji-kanji">{{kanji:Kanji}}</div>
+  <div class="divTable readings">
+    <div class="divTableBody">
+      {{#ON reading}}
+      <div class="divTableRow">
+        <div class="divTableCell smallfont">ON</div>
+        <div class="divTableCell smallfont hidden">{{ON reading}}</div>
+        <div class="divTableCell smallfont hint">&#8592; HINT</div>
       </div>
-    </div>
-    <div class="divTable">
-      <div class="divTableBody">
-        {{#key vocab 1 kanji}}
-        <div class="divTableRow key-vocab-row">
-          <div class="divTableCell"><div class="jp"><div class="kanji"><div class="key-vocab"> {{kanji:key vocab 1 kanji}} </div></div></div></div>
-          <div class="divTableCell"><div class="jp"><div class="furigana"><div class="hidden"><div class="key-vocab"> {{furigana:key vocab 1 reading}} </div></div></div></div></div>
-          <div class="divTableCell hint-vocab">&#8592;   HINT</div>
-        </div>
-        {{/key vocab 1 kanji}}
-        {{#key vocab 2 kanji}}
-        <div class="divTableRow key-vocab-row">
-          <div class="divTableCell"><div class="jp"><div class="kanji"><div class="key-vocab"> {{kanji:key vocab 2 kanji}} </div></div></div></div>
-          <div class="divTableCell"><div class="jp"><div class="furigana"><div class="hidden"><div class="key-vocab"> {{furigana:key vocab 2 reading}} </div></div></div></div></div>
-          <div class="divTableCell hint-vocab">&#8592;   HINT</div>
-        </div>
-        {{/key vocab 2 kanji}}
-        {{#key vocab 3 kanji}}
-        <div class="divTableRow key-vocab-row">
-          <div class="divTableCell"><div class="jp"><div class="kanji"><div class="key-vocab"> {{kanji:key vocab 3 kanji}} </div></div></div></div>
-          <div class="divTableCell"><div class="jp"><div class="furigana"><div class="hidden"><div class="key-vocab"> {{furigana:key vocab 3 reading}} </div></div></div></div></div>
-          <div class="divTableCell hint-vocab">&#8592;   HINT</div>
-        </div>
-        {{/key vocab 3 kanji}}
-        {{#key vocab 4 kanji}}
-        <div class="divTableRow key-vocab-row">
-          <div class="divTableCell"><div class="jp"><div class="kanji"><div class="key-vocab"> {{kanji:key vocab 4 kanji}} </div></div></div></div>
-          <div class="divTableCell"><div class="jp"><div class="furigana"><div class="hidden"><div class="key-vocab"> {{furigana:key vocab 4 reading}} </div></div></div></div></div>
-          <div class="divTableCell hint-vocab">&#8592;   HINT</div>
-        </div>
-        {{/key vocab 4 kanji}}
-        <!-- Standard vocab -->
-        {{#vocab 1 kanji}}
-        <div class="divTableRow">
-          <div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 1 kanji}} </div></div></div>
-          <div class="divTableCell"><div class="jp"><div class="furigana"><div class="hidden"> {{furigana:vocab 1 reading}}</div></div></div></div>
-          <div class="divTableCell hint-vocab">&#8592;   HINT</div>
-        </div>
-        {{/vocab 1 kanji}}
-        {{#vocab 2 kanji}}
-        <div class="divTableRow">
-          <div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 2 kanji}} </div></div></div>
-          <div class="divTableCell"><div class="jp"><div class="furigana"><div class="hidden"> {{furigana:vocab 2 reading}}</div></div></div></div>
-          <div class="divTableCell hint-vocab">&#8592;   HINT</div>
-        </div>
-        {{/vocab 2 kanji}}
-        {{#vocab 3 kanji}}
-        <div class="divTableRow">
-          <div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 3 kanji}} </div></div></div>
-          <div class="divTableCell"><div class="jp"><div class="furigana"><div class="hidden"> {{furigana:vocab 3 reading}}</div></div></div></div>
-          <div class="divTableCell hint-vocab">&#8592;   HINT</div>
-        </div>
-        {{/vocab 3 kanji}}
-        {{#vocab 4 kanji}}
-        <div class="divTableRow">
-          <div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 4 kanji}} </div></div></div>
-          <div class="divTableCell"><div class="jp"><div class="furigana"><div class="hidden"> {{furigana:vocab 4 reading}}</div></div></div></div>
-          <div class="divTableCell hint-vocab">&#8592;   HINT</div>
-        </div>
-        {{/vocab 4 kanji}}
-        {{#vocab 5 kanji}}
-        <div class="divTableRow">
-          <div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 5 kanji}} </div></div></div>
-          <div class="divTableCell"><div class="jp"><div class="furigana"><div class="hidden"> {{furigana:vocab 5 reading}}</div></div></div></div>
-          <div class="divTableCell hint-vocab">&#8592;   HINT</div>
-        </div>
-        {{/vocab 5 kanji}}
-        {{#vocab 6 kanji}}
-        <div class="divTableRow">
-          <div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 6 kanji}} </div></div></div>
-          <div class="divTableCell"><div class="jp"><div class="furigana"><div class="hidden"> {{furigana:vocab 6 reading}}</div></div></div></div>
-          <div class="divTableCell hint-vocab">&#8592;   HINT</div>
-        </div>
-        {{/vocab 6 kanji}}
-        {{#vocab 7 kanji}}
-        <div class="divTableRow">
-          <div class="divTableCell"><div class="jp"><div class="kanji"> {{kanji:vocab 7 kanji}} </div></div></div>
-          <div class="divTableCell"><div class="jp"><div class="furigana"><div class="hidden"> {{furigana:vocab 7 reading}}</div></div></div></div>
-          <div class="divTableCell hint-vocab">&#8592;   HINT</div>
-        </div>
-        {{/vocab 7 kanji}}
+      {{/ON reading}} {{#KUN reading}}
+      <div class="divTableRow">
+        <div class="divTableCell smallfont">KUN</div>
+        <div class="divTableCell smallfont hidden">{{KUN reading}}</div>
+        <div class="divTableCell smallfont hint">&#8592; HINT</div>
       </div>
+      {{/KUN reading}} {{#main ON reading}}
+      <div class="divTableRow">
+        <div class="divTableCell smallfont">Main ON</div>
+        <div class="divTableCell smallfont hidden">{{main ON reading}}</div>
+        <div class="divTableCell smallfont hint">&#8592; HINT</div>
+      </div>
+      {{/main ON reading}}
     </div>
-    <!-- DivTable.com -->
+  </div>
+</div>
+<div class="body-lower">
+  <div class="divTable">
+    <div class="divTableBody">
+      {{#key vocab 1 kanji}}
+      <div class="divTableRow key-vocab">
+        <div class="divTableCell jp kanji">{{kanji:key vocab 1 kanji}}</div>
+        <div class="divTableCell jp furigana hidden">{{furigana:key vocab 1 reading}}</div>
+        <div class="divTableCell hint">&#8592; HINT</div>
+      </div>
+      {{/key vocab 1 kanji}} {{#key vocab 2 kanji}}
+      <div class="divTableRow key-vocab">
+        <div class="divTableCell jp kanji">{{kanji:key vocab 2 kanji}}</div>
+        <div class="divTableCell jp furigana hidden">{{furigana:key vocab 2 reading}}</div>
+        <div class="divTableCell hint">&#8592; HINT</div>
+      </div>
+      {{/key vocab 2 kanji}} {{#key vocab 3 kanji}}
+      <div class="divTableRow key-vocab">
+        <div class="divTableCell jp kanji">{{kanji:key vocab 3 kanji}}</div>
+        <div class="divTableCell jp furigana hidden">{{furigana:key vocab 3 reading}}</div>
+        <div class="divTableCell hint">&#8592; HINT</div>
+      </div>
+      {{/key vocab 3 kanji}} {{#key vocab 4 kanji}}
+      <div class="divTableRow key-vocab">
+        <div class="divTableCell jp kanji">{{kanji:key vocab 4 kanji}}</div>
+        <div class="divTableCell jp furigana hidden">{{furigana:key vocab 4 reading}}</div>
+        <div class="divTableCell hint">&#8592; HINT</div>
+      </div>
+      {{/key vocab 4 kanji}}
+      <!-- Standard vocab -->
+      {{#vocab 1 kanji}}
+      <div class="divTableRow">
+        <div class="divTableCell jp kanji">{{kanji:vocab 1 kanji}}</div>
+        <div class="divTableCell jp furigana hidden">{{furigana:vocab 1 reading}}</div>
+        <div class="divTableCell hint">&#8592; HINT</div>
+      </div>
+      {{/vocab 1 kanji}} {{#vocab 2 kanji}}
+      <div class="divTableRow">
+        <div class="divTableCell jp kanji">{{kanji:vocab 2 kanji}}</div>
+        <div class="divTableCell jp furigana hidden">{{furigana:vocab 2 reading}}</div>
+        <div class="divTableCell hint">&#8592; HINT</div>
+      </div>
+      {{/vocab 2 kanji}} {{#vocab 3 kanji}}
+      <div class="divTableRow">
+        <div class="divTableCell jp kanji">{{kanji:vocab 3 kanji}}</div>
+        <div class="divTableCell jp furigana hidden">{{furigana:vocab 3 reading}}</div>
+        <div class="divTableCell hint">&#8592; HINT</div>
+      </div>
+      {{/vocab 3 kanji}} {{#vocab 4 kanji}}
+      <div class="divTableRow">
+        <div class="divTableCell jp kanji">{{kanji:vocab 4 kanji}}</div>
+        <div class="divTableCell jp furigana hidden">{{furigana:vocab 4 reading}}</div>
+        <div class="divTableCell hint">&#8592; HINT</div>
+      </div>
+      {{/vocab 4 kanji}} {{#vocab 5 kanji}}
+      <div class="divTableRow">
+        <div class="divTableCell jp kanji">{{kanji:vocab 5 kanji}}</div>
+        <div class="divTableCell jp furigana hidden">{{furigana:vocab 5 reading}}</div>
+        <div class="divTableCell hint">&#8592; HINT</div>
+      </div>
+      {{/vocab 5 kanji}} {{#vocab 6 kanji}}
+      <div class="divTableRow">
+        <div class="divTableCell jp kanji">{{kanji:vocab 6 kanji}}</div>
+        <div class="divTableCell jp furigana hidden">{{furigana:vocab 6 reading}}</div>
+        <div class="divTableCell hint">&#8592; HINT</div>
+      </div>
+      {{/vocab 6 kanji}} {{#vocab 7 kanji}}
+      <div class="divTableRow">
+        <div class="divTableCell jp kanji">{{kanji:vocab 7 kanji}}</div>
+        <div class="divTableCell jp furigana hidden">{{furigana:vocab 7 reading}}</div>
+        <div class="divTableCell hint">&#8592; HINT</div>
+      </div>
+      {{/vocab 7 kanji}}
+    </div>
   </div>
 </div>

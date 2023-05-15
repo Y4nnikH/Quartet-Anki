@@ -15,17 +15,13 @@
 /* General card styling */
 
 .card {
-  font-family: arial;
+  font-family: UD Digi Kyokasho N-R;
   font-size: 30px;
   text-align: center;
-  background-color: white;
-}
-
-.card .nightMode {
-  font-family: arial;
-  font-size: 30px;
-  text-align: center;
-  background-color: red;
+  background-color: #fdf8e9;
+  padding: 10px;
+  background-color: #fdf8e9;
+  padding: 10px;
 }
 
 .keyword:first-letter {
@@ -37,62 +33,81 @@
   font-size: 40px;
 }
 
-.kanji-kanji:hover {
-  font-family: "HiraMinProN-W3", "Hiragino Mincho ProN W3",
-    "Hiragino Mincho ProN", "ヒラギノ明朝 ProN W3", "游明朝", YuMincho,
-    "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", "MS Mincho", serif;
+.body-upper {
+  color: #eee;
+  line-height: 1;
+  background-color: #555555;
+  border-radius: 5px 5px 0px 0px;
 }
 
-.keyword {
-  background-color: lightgray;
-  padding: 15px 0 15px 0;
-  margin-bottom: 10px;
-}
-
-.kanji-quesiton {
-  background-color: lightgray;
+.body-upper.recognition {
+  font-family: Noto Sans JP Black;
+  font-size: 40px;
   padding-top: 10px;
   padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-.kanji-quesiton .kanji-on {
-  font-size: 12px;
-  color: LightSeahGreen;
 }
 
-.hint {
+.body-upper.recall {
+  padding: 15px 0 15px 0;
+}
+
+.body-upper .hidden {
+  background-color: #555555;
+  color: #555555;
+}
+.body-upper .hidden:hover {
+  text-align: left;
+  font-size: 12px;
+  color: #9fdbdb;
+}
+
+.body-lower .hidden {
+  background-color: #9fdbdb;
+  color: #9fdbdb;
+}
+.body-lower .hidden:hover {
+  text-align: left;
+  font-size: 15px;
+  color: #555555;
+}
+
+.body-upper .hint {
   color: #aeaeae;
   font-size: 12px;
 }
-
-.divTableCell.hint-vocab {
+.body-lower .hint {
   font-size: 15px;
-  background-color: white;
-  color: #cecece;
+  /* background-color: white;
+  color: #cecece; */
   vertical-align: center;
 }
 
-.hidden-reading {
-  background-color: LightGray;
-  color: LightGray;
-}
-
-.hidden-reading:hover,
-.kanji-on-visible,
-.kanji-kun-visible {
+.body-lower {
   text-align: left;
-  font-size: 12px;
-  color: LightSeaGreen;
+  color: #555555;
+  background-color: #9FDBDB;
+  padding-top: 10px;
 }
 
-/* Vocab table Styling */
+.meaning {
+  text-align: center;
+  font-family: Bree Serif;
+  font-size: 18px;
+  border: 1px solid #555555;
+  padding: 5px;
+  margin: 15px;
+}
+
+.diagram {
+  display: block;
+  margin: 0 auto;
+  width: 130px;
+}
+
+/* Div Table */
 .divTable {
   display: table;
   width: 100%;
-}
-
-.divTable {
-  display: table;
 }
 
 .divTableRow {
@@ -114,12 +129,10 @@
 }
 
 .divTableHeading {
-  background-color: #eee;
   display: table-header-group;
   font-weight: bold;
 }
 .divTableFoot {
-  background-color: #eee;
   display: table-footer-group;
   font-weight: bold;
 }
@@ -127,39 +140,8 @@
   display: table-row-group;
 }
 
-.divTableCell .jp .furigana .hidden .key-vocab {
-  color: WhiteSmoke;
-}
-
-.divTableCell .hidden {
-  color: white;
-}
-
-.key-vocab-row {
-  background-color: WhiteSmoke;
-}
-
-.hidden:hover {
-  color: LightSeaGreen;
-}
-
-.divTableCell .jp .furigana .hidden .key-vocab:hover {
-  color: LightSeaGreen;
-}
-
-.divTableCell .furigana {
-  color: LightSeaGreen;
-}
-
 .divTableCell .english {
   color: GoldenRod;
-}
-
-.diagram {
-  display: block;
-  margin: 0 auto;
-  margin-top: 30px;
-  width: 130px;
 }
 
 /* mobile v.s desktop styling */
@@ -212,4 +194,8 @@
 }
 .ipad .vocab-desktop {
   display: table !important;
+}
+
+.smallfont {
+  font-size: 12px;
 }
